@@ -5,7 +5,7 @@ public class LongestSubstringWithKDistinctCharacters {
     
 
     public static int longestSubstring(String input, int K){
-
+        if(input == null || input.length() == 0 || input.length() < K) return 0;
         Map<Character, Integer> charFrequencies = new HashMap<>();
 
         int windowStart = 0, maximumLength = 0;
