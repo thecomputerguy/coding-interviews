@@ -11,7 +11,7 @@ public class NoRepeatSubstring {
             char f = input.charAt(windowEnd);
 
             if(chars.containsKey(f)){
-                windowStart = Math.max(windowStart,chars.get(f) + 1);
+                windowStart = Math.max(windowStart, chars.get(f) + 1);
             }
             chars.put(f, windowEnd);
             maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
