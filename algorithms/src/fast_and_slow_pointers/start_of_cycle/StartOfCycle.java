@@ -76,7 +76,5 @@ public class StartOfCycle {
         head.next.next.next.next.next.next = head;
         System.out.println("LinkedList cycle start: " + StartOfCycle.findCycleStart(head).data);
     }
-
-    
 }
 
