@@ -27,7 +27,7 @@ class RearrangeString {
         previousEntry = currentEntry;
     }
 
-    return result.toString();
+    return result.length() == str.length() ? result.toString() : "";
   }
 
   public static void main(String[] args) {
