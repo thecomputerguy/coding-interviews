@@ -7,21 +7,21 @@ public class SumOfElementsAlternateSolution {
 
         PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((a, b) -> Integer.compare(b, a));
 
-        for (int i = 0; i < k2; i++) {
-            maxHeap.offer(nums[i]);
-        }
-
-        for (int i = k2; i < nums.length; i++) {
-            
-            if(nums[i] < maxHeap.peek()){
+        for (int i = 0; i < nums.length; i++) {
+            if(i < k2 - 1){
                 maxHeap.offer(nums[i]);
+            }else{
+                if(nums[i] < maxHeap.peek()){
+                    maxHeap.poll();
+                    maxHeap.offer(nums[i]);
+                }
             }
         }
 
-        //Take out k2th
-        maxHeap.poll();
+        
         int howMany = k2 - k1 - 1;
         int sum = 0;
+        
         while (howMany > 0) {
             sum += maxHeap.poll();
             howMany--;
