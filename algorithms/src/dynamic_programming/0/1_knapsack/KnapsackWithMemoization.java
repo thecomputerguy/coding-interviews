@@ -27,7 +27,7 @@ public class KnapsackWithMemoization {
     }
 
     public static void main(String[] args) {
-        Knapsack ks = new Knapsack();
+        KnapsackWithMemoization ks = new KnapsackWithMemoization();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int maxProfit = ks.solveKnapsack(profits, weights, 7);
