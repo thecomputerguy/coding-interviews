@@ -1,3 +1,4 @@
+package knapsack;
 public class Knapsack {
     
     public int solveKnapsack(int[] profits, int[] weights, int capacity){
