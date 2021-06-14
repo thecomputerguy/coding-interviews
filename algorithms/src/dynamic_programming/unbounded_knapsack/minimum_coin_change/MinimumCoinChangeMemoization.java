@@ -17,6 +17,10 @@ public class MinimumCoinChangeMemoization {
         return 0;
       }
 
+      if(dp[currentIndex][total] != null){
+          return dp[currentIndex][total];
+      }
+
       int count1 = Integer.MAX_VALUE; int count2 = Integer.MAX_VALUE;
       if(denominations[currentIndex] <= total){
         count1 = countChange(denominations, total - denominations[currentIndex], currentIndex, dp);
