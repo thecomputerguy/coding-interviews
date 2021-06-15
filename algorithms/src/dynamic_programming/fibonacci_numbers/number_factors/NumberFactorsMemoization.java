@@ -1,4 +1,4 @@
-public class NumberFactorsRecursive {
+public class NumberFactorsMemoization {
     
     public int countWays(int n, Integer[] dp){
         if(n == 0){
@@ -23,9 +23,9 @@ public class NumberFactorsRecursive {
     }
 
     public static void main(String[] args) {
-        NumberFactors en = new NumberFactors();
-        System.out.println(en.countWays(4));
-        System.out.println(en.countWays(5));
-        System.out.println(en.countWays(6));
+        NumberFactorsMemoization en = new NumberFactorsMemoization();
+        System.out.println(en.countWays(4, new Integer[5]));
+        System.out.println(en.countWays(5, new Integer[6]));
+        System.out.println(en.countWays(6, new Integer[7]));
     }
 }
