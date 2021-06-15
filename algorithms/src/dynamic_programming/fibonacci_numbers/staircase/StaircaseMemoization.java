@@ -10,7 +10,11 @@ public class StaircaseMemoization {
     if(n == 2){
         return 2;
     }
-    return countWays(n - 1, dp) + countWays(n - 2, dp) + countWays(n - 3, dp);
+    if(dp[n] != null){
+        return dp[n];
+    }
+    dp[n] = countWays(n - 1, dp) + countWays(n - 2, dp) + countWays(n - 3, dp);
+    return dp[n];
   }
 
   public static void main(String[] args) {
