@@ -3,7 +3,7 @@ public class LPSMemoization {
     public int findLPSLength(String input){
         if(input == null || input.length() == 0) return 0;
         
-        return findLPSLengthRecursive(input, 0, input.length() - 1, new Integer[input.length() + 1][input.length() + 1]);
+        return findLPSLengthRecursive(input, 0, input.length() - 1, new Integer[input.length()][input.length()]);
     }
 
     private int findLPSLengthRecursive(String input, int startIndex, int endIndex, Integer[][] dp){
@@ -31,7 +31,7 @@ public class LPSMemoization {
     }
     
     public static void main(String[] args) {
-    LPS lps = new LPS();
+    LPSMemoization lps = new LPSMemoization();
     System.out.println(lps.findLPSLength("abdbca"));
     System.out.println(lps.findLPSLength("cddpd"));
     System.out.println(lps.findLPSLength("pqr"));
