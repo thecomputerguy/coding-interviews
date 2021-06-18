@@ -4,7 +4,7 @@ public class HouseThiefMemoization {
     if(wealth == null || wealth.length == 0){
         return 0;
     }
-    return findMaxStealRecursive(wealth, 0, new Integer[wealth.length + 1]);
+    return findMaxStealRecursive(wealth, 0, new Integer[wealth.length]);
   }
 
   private int findMaxStealRecursive(int[] wealth, int currentIndex, Integer[] dp){
