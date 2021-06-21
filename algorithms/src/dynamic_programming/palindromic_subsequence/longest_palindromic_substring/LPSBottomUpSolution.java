@@ -14,7 +14,7 @@ public class LPSBottomUpSolution {
         for (int start = input.length() - 1; start >= 0; start--) {
          for (int end = start + 1; end < input.length(); end++) {
              if(input.charAt(start) == input.charAt(end)){
-                if(dp[start + 1][end - 1] == true){
+                if(end - start == 1 || dp[start + 1][end - 1] == true){
 
                     dp[start][end] = true;
                     maxLength = Math.max(maxLength, end - start + 1);
