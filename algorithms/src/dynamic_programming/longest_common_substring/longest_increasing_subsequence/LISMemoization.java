@@ -22,7 +22,7 @@ public class LISMemoization {
          c1 = 1 + findLISLengthRecursive(nums, currentIndex + 1, currentIndex, dp);        
     }
 
-    int c2 = findLISLengthRecursive(nums, currentIndex + 1, currentIndex, dp);
+    int c2 = findLISLengthRecursive(nums, currentIndex + 1, previousIndex, dp);
 
     dp[currentIndex][previousIndex + 1] = Math.max(c1, c2);
     return dp[currentIndex][previousIndex + 1];

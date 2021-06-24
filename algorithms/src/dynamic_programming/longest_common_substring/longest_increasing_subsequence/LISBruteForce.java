@@ -18,7 +18,7 @@ public class LISBruteForce {
          c1 = 1 + findLISLengthRecursive(nums, currentIndex + 1, currentIndex);        
     }
 
-    int c2 = findLISLengthRecursive(nums, currentIndex + 1, currentIndex);
+    int c2 = findLISLengthRecursive(nums, currentIndex + 1, previousIndex);
 
     return Math.max(c1, c2);
   }
