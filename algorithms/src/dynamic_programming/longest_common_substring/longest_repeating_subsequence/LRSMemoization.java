@@ -25,7 +25,7 @@ public class LRSMemoization {
   }
 
   public static void main(String[] args) {
-    LRSBruteForce lrs = new LRSBruteForce();
+    LRSMemoization lrs = new LRSMemoization();
     System.out.println(lrs.findLRSLength("tomorrow"));
     System.out.println(lrs.findLRSLength("aabdbcec"));
     System.out.println(lrs.findLRSLength("fmff"));
