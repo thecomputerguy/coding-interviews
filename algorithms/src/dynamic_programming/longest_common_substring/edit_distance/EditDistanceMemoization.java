@@ -12,7 +12,8 @@ public class EditDistanceMemoization {
     if(index2 == s2.length()) return s1.length() - index1;
     if(dp[index1][index2] != null) return dp[index1][index2];
     if(s1.charAt(index1) == s2.charAt(index2)){
-        return findMinOperationsRecursive(s1, s2, index1 + 1, index2 + 1, dp);
+        dp[index1][index2] = findMinOperationsRecursive(s1, s2, index1 + 1, index2 + 1, dp);
+        return dp[index1][index2];
     }
     int c1 = 1 + findMinOperationsRecursive(s1, s2, index1 + 1, index2, dp);//delete operation
     int c2 = 1 + findMinOperationsRecursive(s1, s2, index1 + 1, index2 + 1, dp);//replace operation
